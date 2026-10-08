@@ -4,19 +4,20 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
+- Hints were backwards. When the actual number was lower, it suggested higher and vice versa.
+- Difficulty categories were wrong. Medium was harder (guess a number between 1-100) than the hard category (guess a number between 1-50).
+- Scoring system didn't make any sense. Sometimes it was - 7 and othertimes it was - 35.
+
 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|  Input | Expected Behavior | Actual Behavior | Console Output / Error |
+|--------|-------------------|-----------------|------------------------|
+|  50    |  Go Lower         |  Go Higher      | Wrong Hint             |
+| Medium | # between 1-50    | # between 1-100 | Wrong category.        |
+| Guesses| Sensical scoring. | nonsensical     | No logic to score      |
 
 ---
 
