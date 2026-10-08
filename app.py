@@ -1,6 +1,7 @@
 import random
 import streamlit as st
 # FIXED: Ranges now grow with difficulty (Easy 1-20, Normal 1-50, Hard 1-100).
+# FIX: Adjusted range thresholds with Claude so Easy is 1-20, Normal is 1-50, and Hard is 1-100.
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
@@ -28,7 +29,7 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+# FIX: Inverted hint direction and removed str conversion after debugging with Claude in chat.
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
@@ -126,7 +127,7 @@ if new_game:
     st.session_state.secret = random.randint(low, high)
     st.success("New game started.")
     st.rerun()
-# FIXHandle game status before processing a new guess
+# FIX: Corrected game-over conditional so the secret is revealed upon exhaustion of attempts.
 if st.session_state.status != "playing":
     if st.session_state.status == "won":
         st.success(f"You won! The secret was {st.session_state.secret}. Start a new game to play again.")
