@@ -44,15 +44,14 @@ Game Glitch Investigator is an interactive Streamlit guessing game designed as a
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-
-<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 22 32 PM" src="https://github.com/user-attachments/assets/fbf7925c-0ded-4dea-9979-c82f895dd922" />
-
-<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 31 00 PM" src="https://github.com/user-attachments/assets/e077ddbb-0f6f-4606-b5bb-7842094af500" />
-
-<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 58 17 PM" src="https://github.com/user-attachments/assets/0f8fd8f6-479b-4e39-ae8d-477b842f2366" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/50351fd7-ae9d-4b17-90f8-daeca96dadda" />
 
 
-1. Started a game on Normal difficulty. Entered guess of 50.
+
+
+
+
+1. Started a game on Normal difficulty. Entered guess of 25.
 2. 
 Entered 3. The game said "Go HIGHER!" and the score went down to -5.
 Entered 100. The game said "Go LOWER!" and the score went down to -10.
@@ -63,6 +62,8 @@ Entered 97. The game showed "Correct!" and the round ended with a win Final scor
 4. <!-- Describe this step -->
 5. <!-- Describe this step -->
 6. <!-- Add more steps as needed -->
+
+<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 58 17 PM" src="https://github.com/user-attachments/assets/0f8fd8f6-479b-4e39-ae8d-477b842f2366" />
 
 
 # ========================= X passed in 0.XXs =========================
