@@ -1,6 +1,6 @@
 import random
 import streamlit as st
-
+# FIXME: Difficulty ranges are misaligned. 'Hard' (1-50) is smaller/easier than 'Normal' (1-100).
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
@@ -32,13 +32,14 @@ def parse_guess(raw: str):
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
-
+# FIXME: Hint messages are swapped here; 'Too High' should say 'Go LOWER' and 'Too Low' should say 'Go HIGHER'
     try:
         if guess > secret:
             return "Too High", "📈 Go HIGHER!"
         else:
             return "Too Low", "📉 Go LOWER!"
     except TypeError:
+# FIXME: Swapped messages repeated here; also secret shouldn't be converted t        
         g = str(guess)
         if g == secret:
             return "Win", "🎉 Correct!"
@@ -154,7 +155,7 @@ if submit:
         st.error(err)
     else:
         st.session_state.history.append(guess_int)
-
+# FIXME: Secret is converted to str on even attempts, causing TypeError and alphabetical comparison
         if st.session_state.attempts % 2 == 0:
             secret = str(st.session_state.secret)
         else:
