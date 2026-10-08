@@ -25,27 +25,46 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+Game Glitch Investigator is an interactive Streamlit guessing game designed as an AI debugging exercise, where the player attempts to guess a randomly generated secret integer within a set number of attempts based on selected difficulty levels.
+   
+- [x] Detail which bugs you found.
+1. Reversed higher/lower hints.
+2. Difficulty ranges for games incorrect.
+3. Scoring incorrect.
+
+- [x] Explain what fixes you applied.
+1. Corrected the directional string messages in check_guess and moved the clean numeric comparison logic into logic_utils.py.
+2. Removed the str() cast on even attempts so guesses and secrets are strictly compared as integers.
+3. Rebalanced get_range_for_difficulty so ranges scale properly (Easy: 1–20, Normal: 1–50, Hard: 1–100).
+4. Updated the game-over condition to explicitly display st.session_state.secret in the UI error banner when guesses run out.   
+
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
+
+<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 22 32 PM" src="https://github.com/user-attachments/assets/fbf7925c-0ded-4dea-9979-c82f895dd922" />
+
+<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 31 00 PM" src="https://github.com/user-attachments/assets/e077ddbb-0f6f-4606-b5bb-7842094af500" />
+
+<img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 58 17 PM" src="https://github.com/user-attachments/assets/0f8fd8f6-479b-4e39-ae8d-477b842f2366" />
+
+
+1. Started a game on Normal difficulty. Entered guess of 50.
+2. 
+Entered 3. The game said "Go HIGHER!" and the score went down to -5.
+Entered 100. The game said "Go LOWER!" and the score went down to -10.
+Entered 100 again (an even attempt). The game still said "Go LOWER!", so the hint stayed correct, but the score went up by 5 to -5. This is a scoring bug I did not fix.
+Entered 80. The game said "Go HIGHER!" and the score went back down to -10.
+Entered 97. The game showed "Correct!" and the round ended with a win Final score: 20<!-- Describe this step -->
 3. <!-- Describe this step -->
 4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+5. <!-- Describe this step -->
+6. <!-- Add more steps as needed -->
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
-## 🧪 Test Results
-
-```
-# Paste your pytest output here, e.g.:
-# pytest tests/
 # ========================= X passed in 0.XXs =========================
 ```
 
