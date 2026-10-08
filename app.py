@@ -126,12 +126,12 @@ if new_game:
     st.session_state.secret = random.randint(low, high)
     st.success("New game started.")
     st.rerun()
-
+# FIXHandle game status before processing a new guess
 if st.session_state.status != "playing":
     if st.session_state.status == "won":
-        st.success("You already won. Start a new game to play again.")
+        st.success(f"You won! The secret was {st.session_state.secret}. Start a new game to play again.")
     else:
-        st.error("Game over. Start a new game to try again.")
+        st.error(f"Game over! The secret number was {st.session_state.secret}. Start a new game to try again.")
     st.stop()
 
 if submit:
