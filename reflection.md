@@ -17,36 +17,36 @@ Document at least 3 bugs you found. Add rows as needed.
 |--------|-------------------|-----------------|------------------------|
 |  50    |  Go Lower         |  Go Higher      | Wrong Hint             |
 | Medium | # between 1-50    | # between 1-100 | Wrong category.        |
-| Guesses| Sensical scoring. | nonsensical     | No logic to score      |
+| Guesses| Sensical scoring. | nonsensical     | No logic to score |
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+- Claude Code
+- Claude suggested fixing the inverted hints in check-guess to fix the higher/lower problem. I tested the game manually.
+
+- The initial recommendation fixed the lower/higher, but it wouldn't display the secret number if the person never guessed it. I worked with Claude to modify the code via a Q & A session. I tested it manually. 
 
 ---
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
-- Did AI help you design or understand any tests? How?
+- I checked with developer inspection and also game playthroughs. 
+- I played through tests sessions across all three play difficulties. .
+- It explained how odd/even attempt counters were manipulating variable types in the background. 
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+- Streamlit executes Python scripts from top to bottom every single time the user interacts but it keeps session info (like the secret number or attempt count) in a st.session_state.
 
 ---
-
+ 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+- I will use the FIXME trick to mark code i suspect is a problem in the future. 
+  - I will keep using github desktop. This workflow flows well
+- Before applying any AI code suggestion, I will check the user experience and edge-case handling
+- The generated code may still contain errors, so it is important to understand what it is actually doing. It seems like breaking each issue into a separate chat helps keep the focus, but it may cause some problems if the fix for problem A causes new problems with problem B.
