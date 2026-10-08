@@ -46,29 +46,13 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 
 <img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/50351fd7-ae9d-4b17-90f8-daeca96dadda" />
 
-
-
-
-
-
-1. Started a game on Normal difficulty. Entered guess of 25.
-2. 
-Entered 3. The game said "Go HIGHER!" and the score went down to -5.
-Entered 100. The game said "Go LOWER!" and the score went down to -10.
-Entered 100 again (an even attempt). The game still said "Go LOWER!", so the hint stayed correct, but the score went up by 5 to -5. This is a scoring bug I did not fix.
-Entered 80. The game said "Go HIGHER!" and the score went back down to -10.
-Entered 97. The game showed "Correct!" and the round ended with a win Final score: 20<!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Describe this step -->
-6. <!-- Add more steps as needed -->
+1. Started a new game on Normal difficulty. Entered guess of 25. The game said "Go LOWER!"
+2. Entered 13 as new guess. The game said "Go LOWER!"
+3. Entered 8 as new guess. The game said "Go LOWER!"
+4. Entered 6 as new guess. The game said "Go LOWER!"
+5. Entered 5 as new guess. The game said "Go LOWER!"
+6. Entered 4 as new guess. The game said "Go LOWER!"
+7. Entered 3 as new guess. The game said "Go LOWER!"
+8. Entered 2 as new guess. Lost...
 
 <img width="1280" height="800" alt="Screenshot 2026-10-07 at 10 58 17 PM" src="https://github.com/user-attachments/assets/0f8fd8f6-479b-4e39-ae8d-477b842f2366" />
-
-
-# ========================= X passed in 0.XXs =========================
-```
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
